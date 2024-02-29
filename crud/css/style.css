@@ -1,0 +1,31 @@
+/**NAVEGACION**/
+
+body .nav-container{
+    background-color: #efefef;
+    height: 55px;
+    margin: 0 0 0 0;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+body .nav-container .nav-links li{
+    text-decoration: none;
+    display: inline-block;
+    transform: translate(-50, 50);
+    padding: 0 20px;
+}
+
+body .nav-container .nav-links li:hover{
+    transform: scale(1.1);   
+}
+
+body .nav-container .nav-links li a{
+    color: #283747;
+}
+
+body .nav-container .nav-links li a:hover{
+    color: #3EC483;
+    transform: scale(1.2);
+}

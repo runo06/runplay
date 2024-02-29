@@ -1,0 +1,316 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "product product sidebar"
+        "description description sidebar"
+        "footer footer footer";
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    grid-area: header;
+    background-color: #D5DBDB	;
+    color: #283747;
+    display: flex;
+    top: 0;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.acomodacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    height: 75px;
+    width: auto;
+    transition: all 0.3s;
+    border-radius: 20%;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
+}
+
+
+section.product {
+    grid-area: product;
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.product img {
+    max-width: 100%;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product h2 {
+    color: #333;
+}
+
+.product p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button :hover{
+    transform: scale(1.2);
+}
+
+.sidebar_producto {
+    margin-right: 15px;
+    grid-area: sidebar;
+    max-height: 560px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+}
+
+.juego_recomendado {
+    margin-bottom: 15px;
+    background-color: #E5E7E9;
+    border-radius: 10px;
+}
+
+.juego_recomendado img {
+    max-width: 100%;
+    height: 100px;
+    margin: 10px 0 0 0;
+}
+
+.juego_recomendado p {
+    color: #333;
+}
+
+.juego_recomendado a{
+    text-decoration: none;
+}
+
+section.description {
+    grid-area: description;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.description h3, .description h2 {
+    color: #333;
+}
+
+.description p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.description ul{
+    list-style: disc;
+}
+
+.contenedor .footer{
+    background-color: #273746;
+    color: #fff;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: 100%;
+    height: auto;
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    display: flex;
+}
+
+.footer .grupo-1 .box{
+    max-width: 400px;
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 50px;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 figure img:hover{
+    transform: scale(1.2);
+}
+
+.footer .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 27px;
+}
+
+.footer .grupo-1 .box p{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #212F3D;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 .red-social a:hover{
+    color: #3EC483;
+}
+
+.footer .grupo-2{
+    background-color: #212F3D;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.footer .grupo-2 small{
+    font-size: 15px;
+}
+
+@media (max-width: 900px) {
+
+
+    .container {
+        grid-template-areas:
+            "header header header"
+            "product product product"
+            "sidebar sidebar sidebar"
+            "description description description"
+            "footer footer footer";
+    }
+
+    
+
+    .sidebar_producto{
+        width: 100%;
+    }
+
+    .sidebar_responsive{
+        display: flex;
+    justify-content: center;    }
+
+    .juego_recomendado{
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .footer .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+        display: grid;
+    }
+
+    .footer .grupo-1 .box figure {
+        display: grid;
+    }
+}
+
+.footer .grupo-1 .box figure img{
+    display: none;
+}
+
+@media (max-width: 650px){
+
+    .product{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product img {
+        width: 333px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .sidebar_producto{
+        padding: 10px;
+        max-height: 695px;
+        padding: 0;
+
+
+    }
+
+    .juego_recomendado img{
+        height: 120px;
+    }
+
+    .sidebar_responsive{
+        flex-direction: column;
+    }
+
+    .footer .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+        display: grid;
+    }
+    .footer .grupo-1 .box figure{
+        display: grid;
+    }
+}

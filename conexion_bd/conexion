@@ -1,0 +1,29 @@
+<?php
+$servername = "127.0.0.1:33065";
+$username = "root";
+$password = "";
+$dbname = "pruebas";
+
+// Crear conexión
+$conexion = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
+}
+?>
+
+<?php
+    $server = "sql104.infinityfree.com";
+    $user = "if0_35809269";
+    $pass = "nKuaZCZsJyfzIw";
+    $db = "if0_35809269_runplay";
+    $conexion = new mysqli($server, $user, $pass, $db);
+
+    if($conexion->connect_error){
+        die("<h3>CONEXION FALLIDA</h3>". $conexion->connect_error);
+    }
+
+    $conexion->set_charset("utf8mb4");
+
+?>
