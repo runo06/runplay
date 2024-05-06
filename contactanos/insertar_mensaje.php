@@ -8,6 +8,10 @@
     margin-right: 20px;
 }
 
+.hola{
+   margin-top: 10px;
+}
+
 .container .contact {
     margin-top: 10px;
     display: flex;
